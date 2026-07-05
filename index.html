@@ -825,6 +825,52 @@
       .entry-button[data-view-target="work-approval"] .entry-icon { --entry-a: #6c737d; --entry-b: #22272e; }
       .entry-button[data-view-target="work-project"] .entry-icon { --entry-a: #49cc8b; --entry-b: #168052; }
 
+      .entry-button[data-view-target="work-ppt"] .entry-icon {
+        --ppt-accent: #cc6a4a;
+        border-color: rgba(38, 42, 49, .12);
+        background:
+          radial-gradient(circle at 28% 18%, rgba(255,255,255,.95), rgba(255,255,255,.28) 28%, transparent 54%),
+          linear-gradient(145deg, #fbfcfd, #edf1f5);
+        color: #252a32;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.82), 0 8px 16px rgba(53,60,70,.10);
+      }
+
+      .entry-button[data-view-target="work-ppt"] .entry-icon::after {
+        content: "";
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        z-index: 1;
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--ppt-accent);
+        box-shadow: 0 0 0 3px rgba(204,106,74,.14);
+      }
+
+      .entry-button[data-view-target="work-crm"] .entry-icon {
+        --crm-entry-accent: #147ce5;
+        border-color: rgba(38, 42, 49, .12);
+        background:
+          radial-gradient(circle at 28% 18%, rgba(255,255,255,.95), rgba(255,255,255,.28) 28%, transparent 54%),
+          linear-gradient(145deg, #fbfcfd, #edf2f6);
+        color: #232a34;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.82), 0 8px 16px rgba(53,60,70,.10);
+      }
+
+      .entry-button[data-view-target="work-crm"] .entry-icon::after {
+        content: "";
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        z-index: 1;
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--crm-entry-accent);
+        box-shadow: 0 0 0 3px rgba(20,124,229,.14);
+      }
+
       .status-pill,
       .type-pill {
         min-height: 22px;
@@ -1090,6 +1136,400 @@
         stroke-linejoin: round;
         fill: none;
         filter: drop-shadow(0 5px 9px rgba(0,0,0,.18));
+      }
+
+      .feature-art.logo-hero,
+      .store-item-icon.logo-tile {
+        --logo-accent: #cc6a4a;
+        --logo-ink: #242830;
+        border-color: rgba(39, 45, 55, .12);
+        background:
+          radial-gradient(circle at 28% 16%, rgba(255,255,255,.98), rgba(255,255,255,.36) 25%, transparent 52%),
+          linear-gradient(145deg, #fcfdfd 0%, #eef2f5 58%, #e5ebf0 100%);
+        color: var(--logo-ink);
+        box-shadow:
+          inset 0 1px 0 rgba(255,255,255,.94),
+          inset 0 -18px 38px rgba(94,105,120,.08),
+          0 18px 34px rgba(37,43,52,.10);
+      }
+
+      .feature-art.logo-hero {
+        width: 158px;
+        height: 158px;
+        border-radius: 34px;
+      }
+
+      .feature-art.logo-hero::before,
+      .store-item-icon.logo-tile::before {
+        inset: 8px;
+        z-index: 1;
+        border-radius: 26px;
+        border: 1px solid rgba(255,255,255,.74);
+        background:
+          linear-gradient(145deg, rgba(255,255,255,.72), rgba(255,255,255,.18)),
+          radial-gradient(circle at 20% 18%, rgba(255,255,255,.72), transparent 46%);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.72);
+      }
+
+      .feature-art.logo-hero::after,
+      .store-item-icon.logo-tile::after {
+        right: 14px;
+        bottom: 14px;
+        z-index: 2;
+        width: 34px;
+        height: 9px;
+        border-radius: 999px;
+        border: 0;
+        background: linear-gradient(90deg, var(--logo-accent), rgba(204,106,74,.28));
+        box-shadow: 0 8px 18px rgba(204,106,74,.18);
+      }
+
+      .store-item-icon.logo-tile {
+        width: 58px;
+        height: 58px;
+        border-radius: 15px;
+        box-shadow:
+          inset 0 1px 0 rgba(255,255,255,.90),
+          inset 0 -11px 22px rgba(94,105,120,.08),
+          0 10px 18px rgba(37,43,52,.09);
+      }
+
+      .store-item-icon.logo-tile::before {
+        inset: 5px;
+        border-radius: 11px;
+      }
+
+      .store-item-icon.logo-tile::after {
+        right: 6px;
+        bottom: 6px;
+        width: 16px;
+        height: 5px;
+        box-shadow: 0 5px 11px rgba(204,106,74,.18);
+      }
+
+      .store-item-icon.logo-tile .icon {
+        display: none;
+      }
+
+      .ppt-mark {
+        position: relative;
+        z-index: 3;
+        width: 80px;
+        height: 76px;
+        display: grid;
+        place-items: center;
+        color: var(--logo-ink);
+      }
+
+      .ppt-mark-sm {
+        width: 32px;
+        height: 32px;
+      }
+
+      .ppt-screen {
+        position: relative;
+        width: 62px;
+        height: 45px;
+        border: 3px solid currentColor;
+        border-radius: 12px;
+        background:
+          linear-gradient(145deg, rgba(255,255,255,.98), rgba(242,245,248,.90));
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.86);
+      }
+
+      .ppt-mark-sm .ppt-screen {
+        width: 25px;
+        height: 19px;
+        border-width: 2px;
+        border-radius: 6px;
+      }
+
+      .ppt-screen i {
+        position: absolute;
+        left: 11px;
+        display: block;
+        height: 3px;
+        border-radius: 999px;
+        background: rgba(36,40,48,.82);
+      }
+
+      .ppt-screen i:nth-child(1) {
+        top: 11px;
+        width: 23px;
+        background: var(--logo-accent);
+      }
+
+      .ppt-screen i:nth-child(2) {
+        top: 20px;
+        width: 34px;
+      }
+
+      .ppt-screen i:nth-child(3) {
+        top: 29px;
+        width: 18px;
+        background: rgba(36,40,48,.32);
+      }
+
+      .ppt-mark-sm .ppt-screen i {
+        left: 5px;
+        height: 2px;
+      }
+
+      .ppt-mark-sm .ppt-screen i:nth-child(1) { top: 5px; width: 10px; }
+      .ppt-mark-sm .ppt-screen i:nth-child(2) { top: 10px; width: 14px; }
+      .ppt-mark-sm .ppt-screen i:nth-child(3) { top: 15px; width: 8px; }
+
+      .ppt-stand {
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
+        width: 36px;
+        height: 18px;
+        transform: translateX(-50%);
+      }
+
+      .ppt-stand::before,
+      .ppt-stand::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background: currentColor;
+        transform: translateX(-50%);
+      }
+
+      .ppt-stand::before {
+        top: 0;
+        width: 3px;
+        height: 15px;
+        border-radius: 999px;
+      }
+
+      .ppt-stand::after {
+        bottom: 0;
+        width: 34px;
+        height: 3px;
+        border-radius: 999px;
+      }
+
+      .ppt-mark-sm .ppt-stand {
+        bottom: -1px;
+        width: 18px;
+        height: 9px;
+      }
+
+      .ppt-mark-sm .ppt-stand::before {
+        width: 2px;
+        height: 8px;
+      }
+
+      .ppt-mark-sm .ppt-stand::after {
+        width: 17px;
+        height: 2px;
+      }
+
+      .feature-art.logo-hero.crm-hero,
+      .store-item-icon.logo-tile.crm {
+        --logo-accent: #147ce5;
+        --logo-ink: #222a34;
+        --crm-accent-2: #2a9f72;
+      }
+
+      .feature-art.logo-hero.crm-hero::after,
+      .store-item-icon.logo-tile.crm::after {
+        background: linear-gradient(90deg, var(--logo-accent), rgba(42,159,114,.34));
+        box-shadow: 0 8px 18px rgba(20,124,229,.17);
+      }
+
+      .crm-mark {
+        position: relative;
+        z-index: 3;
+        width: 84px;
+        height: 76px;
+        display: block;
+        color: var(--logo-ink);
+      }
+
+      .crm-card {
+        position: absolute;
+        left: 4px;
+        top: 13px;
+        width: 58px;
+        height: 48px;
+        border: 3px solid currentColor;
+        border-radius: 16px;
+        background:
+          linear-gradient(145deg, rgba(255,255,255,.98), rgba(241,245,248,.88));
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.86);
+      }
+
+      .crm-card::before,
+      .crm-card::after {
+        content: "";
+        position: absolute;
+      }
+
+      .crm-card::before {
+        left: 10px;
+        top: 9px;
+        width: 13px;
+        height: 13px;
+        border: 3px solid currentColor;
+        border-radius: 999px;
+        background: #fff;
+      }
+
+      .crm-card::after {
+        left: 8px;
+        top: 29px;
+        width: 29px;
+        height: 8px;
+        border-radius: 999px 999px 7px 7px;
+        background: currentColor;
+        opacity: .92;
+      }
+
+      .crm-card i {
+        position: absolute;
+        left: 32px;
+        display: block;
+        height: 3px;
+        border-radius: 999px;
+        background: rgba(34,42,52,.28);
+      }
+
+      .crm-card i:nth-child(1) {
+        top: 14px;
+        width: 14px;
+        background: var(--logo-accent);
+      }
+
+      .crm-card i:nth-child(2) {
+        top: 23px;
+        width: 18px;
+      }
+
+      .crm-link,
+      .crm-node {
+        position: absolute;
+        display: block;
+      }
+
+      .crm-link {
+        z-index: 1;
+        height: 3px;
+        border-radius: 999px;
+        background: rgba(34,42,52,.38);
+        transform-origin: left center;
+      }
+
+      .crm-link-a {
+        left: 50px;
+        top: 26px;
+        width: 25px;
+        transform: rotate(-27deg);
+      }
+
+      .crm-link-b {
+        left: 49px;
+        top: 45px;
+        width: 23px;
+        transform: rotate(24deg);
+      }
+
+      .crm-node {
+        z-index: 2;
+        border-radius: 999px;
+        border: 3px solid rgba(255,255,255,.86);
+        box-shadow: 0 9px 18px rgba(31,35,43,.12);
+      }
+
+      .crm-node-main {
+        right: 2px;
+        top: 8px;
+        width: 24px;
+        height: 24px;
+        background: var(--logo-accent);
+      }
+
+      .crm-node-alt {
+        right: 8px;
+        bottom: 11px;
+        width: 18px;
+        height: 18px;
+        background: var(--crm-accent-2);
+      }
+
+      .crm-mark-sm {
+        width: 32px;
+        height: 32px;
+      }
+
+      .crm-mark-sm .crm-card {
+        left: 0;
+        top: 6px;
+        width: 24px;
+        height: 21px;
+        border-width: 2px;
+        border-radius: 8px;
+      }
+
+      .crm-mark-sm .crm-card::before {
+        left: 4px;
+        top: 4px;
+        width: 5px;
+        height: 5px;
+        border-width: 2px;
+      }
+
+      .crm-mark-sm .crm-card::after {
+        left: 4px;
+        top: 14px;
+        width: 11px;
+        height: 4px;
+        border-radius: 999px 999px 4px 4px;
+      }
+
+      .crm-mark-sm .crm-card i {
+        left: 14px;
+        height: 2px;
+      }
+
+      .crm-mark-sm .crm-card i:nth-child(1) { top: 6px; width: 6px; }
+      .crm-mark-sm .crm-card i:nth-child(2) { top: 11px; width: 8px; }
+
+      .crm-mark-sm .crm-link {
+        height: 2px;
+      }
+
+      .crm-mark-sm .crm-link-a {
+        left: 21px;
+        top: 12px;
+        width: 9px;
+      }
+
+      .crm-mark-sm .crm-link-b {
+        left: 20px;
+        top: 20px;
+        width: 9px;
+      }
+
+      .crm-mark-sm .crm-node {
+        border-width: 2px;
+        box-shadow: 0 4px 9px rgba(31,35,43,.10);
+      }
+
+      .crm-mark-sm .crm-node-main {
+        right: 0;
+        top: 4px;
+        width: 10px;
+        height: 10px;
+      }
+
+      .crm-mark-sm .crm-node-alt {
+        right: 2px;
+        bottom: 5px;
+        width: 8px;
+        height: 8px;
       }
 
       .store-section {
@@ -2496,29 +2936,29 @@
         <nav class="global-nav" aria-label="全局导航">
           <div class="window-controls" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="brand-mark" aria-label="WorkforceOS"><span>W</span></div>
-          <button class="nav-button" type="button" data-toast="已准备新对话" title="新对话"><svg class="icon" aria-hidden="true"><use href="#icon-message"></use></svg><span>新对话</span></button>
-          <button class="nav-button" type="button" data-toast="搜索已准备好" title="搜索"><svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg><span>搜索</span></button>
+          <button class="nav-button" type="button" data-view-target="new-chat" title="新对话"><svg class="icon" aria-hidden="true"><use href="#icon-message"></use></svg><span>新对话</span></button>
+          <button class="nav-button" type="button" data-view-target="search" title="搜索"><svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg><span>搜索</span></button>
           <button class="nav-button has-badge" type="button" data-count="5" data-view-target="tohandle" title="待办中心"><svg class="icon" aria-hidden="true"><use href="#icon-checks"></use></svg><span>待办</span></button>
           <button class="nav-button" type="button" data-view-target="library" title="资料库"><svg class="icon" aria-hidden="true"><use href="#icon-library"></use></svg><span>资料库</span></button>
           <button class="nav-button" type="button" data-view-target="apps" title="应用"><svg class="icon" aria-hidden="true"><use href="#icon-apps"></use></svg><span>应用</span></button>
-          <button class="nav-button" type="button" data-toast="自动化入口已打开" title="自动化"><svg class="icon" aria-hidden="true"><use href="#icon-flow"></use></svg><span>自动化</span></button>
+          <button class="nav-button" type="button" data-view-target="automations" title="自动化"><svg class="icon" aria-hidden="true"><use href="#icon-flow"></use></svg><span>自动化</span></button>
           <div class="nav-spacer"></div>
-          <button class="nav-button" type="button" data-toast="设置入口已打开" title="设置"><svg class="icon" aria-hidden="true"><use href="#icon-settings"></use></svg><span>设置</span></button>
+          <button class="nav-button" type="button" data-view-target="settings" title="设置"><svg class="icon" aria-hidden="true"><use href="#icon-settings"></use></svg><span>设置</span></button>
         </nav>
 
         <section class="work-rail" aria-label="项目下的工作入口">
           <header class="rail-head">
             <strong>工作</strong>
-            <button class="icon-button" type="button" aria-label="新建对话"><svg class="icon sm" aria-hidden="true"><use href="#icon-plus"></use></svg></button>
+            <button class="icon-button" type="button" data-view-target="new-chat" aria-label="新建对话"><svg class="icon sm" aria-hidden="true"><use href="#icon-plus"></use></svg></button>
           </header>
-          <div class="search-field" aria-label="搜索工作"><svg class="icon sm" aria-hidden="true"><use href="#icon-search"></use></svg><span>搜索项目、客户、资料...</span></div>
+          <button class="search-field" type="button" data-view-target="search" aria-label="搜索工作"><svg class="icon sm" aria-hidden="true"><use href="#icon-search"></use></svg><span>搜索项目、客户、资料...</span></button>
           <div>
             <div class="section-label">当前项目</div>
             <div class="project-group">
               <div class="project-title"><span>保险经纪客户 A</span><span class="count-pill">5</span></div>
               <button class="work-button active" type="button" data-view-target="conversation"><span><strong>一期数字化方案交付</strong><span>客户汇报 / 合同推进</span></span><span class="type-pill">进行中</span></button>
               <button class="work-button" type="button" data-view-target="work-crm"><span><strong>客户背景整理</strong><span>CRM 客户对象</span></span><span class="type-pill">已更新</span></button>
-              <button class="work-button" type="button" data-view-target="work-contract"><span><strong>充值消费合同</strong><span>草稿待确认</span></span><span class="type-pill">待处理</span></button>
+              <button class="work-button" type="button" data-view-target="work-contract"><span><strong>充值消费合同</strong><span>草稿待确认</span></span><span class="type-pill">待办</span></button>
             </div>
           </div>
           <div>
@@ -2540,7 +2980,7 @@
           </div>
           <div class="top-actions">
             <span class="status-pill"><span class="dot blue"></span>保险经纪客户 A</span>
-            <button class="small-button" type="button" data-toast="已打开当前工作记录">工作记录</button>
+            <button class="small-button" type="button" data-view-target="record">工作记录</button>
             <button class="small-button" type="button" data-view-target="apps">应用</button>
           </div>
         </header>
@@ -2576,9 +3016,9 @@
                 <article class="result-card">
                   <header>
                     <div>
-                      <div class="card-label">待处理 - Action Card</div>
+                  <div class="card-label">待办 - Needs Action</div>
                       <h2>合同条款和实施范围需要确认</h2>
-                      <p>合同草稿已按“一期服务 + 后续充值消费”整理。审批应用里有价格边界和交付范围两个待处理项，项目管理应用已生成一期实施里程碑。</p>
+                      <p>合同草稿已按“一期服务 + 后续充值消费”整理。审批应用里有价格边界和交付范围两个待办项，项目管理应用已生成一期实施里程碑。</p>
                     </div>
                     <div class="deck-mini" aria-hidden="true"><span></span><span></span><span></span></div>
                   </header>
@@ -2595,14 +3035,83 @@
                 <div>
                   <div class="composer-placeholder">继续提要求、引用资料、@子系统，或让管家推进下一步...</div>
                   <div class="composer-tools" aria-label="输入框工具">
-                    <button class="small-button" type="button"><svg class="icon sm" aria-hidden="true"><use href="#icon-plus"></use></svg>添加</button>
-                    <button class="small-button" type="button"><svg class="icon sm" aria-hidden="true"><use href="#icon-apps"></use></svg>使用</button>
-                    <button class="small-button" type="button"><svg class="icon sm" aria-hidden="true"><use href="#icon-link"></use></svg>引用资料</button>
+                    <button class="small-button" type="button" data-toast="已打开添加面板"><svg class="icon sm" aria-hidden="true"><use href="#icon-plus"></use></svg>添加</button>
+                    <button class="small-button" type="button" data-view-target="apps"><svg class="icon sm" aria-hidden="true"><use href="#icon-apps"></use></svg>使用</button>
+                    <button class="small-button" type="button" data-view-target="library"><svg class="icon sm" aria-hidden="true"><use href="#icon-link"></use></svg>引用资料</button>
                   </div>
                 </div>
                 <button class="primary" type="button" data-toast="已发送给管家"><svg class="icon sm" aria-hidden="true"><use href="#icon-send"></use></svg>发送</button>
               </div>
             </footer>
+          </section>
+
+          <section class="screen" data-screen="new-chat" hidden aria-label="新对话">
+            <div class="scroll-area">
+              <div class="conversation-flow">
+                <article class="result-card">
+                  <header>
+                    <div>
+                      <div class="card-label">新对话 - New Chat</div>
+                      <h2>开始一个新的工作讨论</h2>
+                      <p>这里可以直接输入新需求，也可以从当前保险经纪客户 A 的资料、应用或模板开始。新对话后续可以转成正式工作，并回到左侧工作列表。</p>
+                    </div>
+                    <div class="deck-mini" aria-hidden="true"><span></span><span></span><span></span></div>
+                  </header>
+                  <div class="card-actions">
+                    <button class="primary" type="button" data-view-target="conversation"><svg class="icon sm" aria-hidden="true"><use href="#icon-message"></use></svg>回到当前主对话</button>
+                    <button class="secondary" type="button" data-view-target="apps"><svg class="icon sm" aria-hidden="true"><use href="#icon-apps"></use></svg>从应用开始</button>
+                    <button class="secondary" type="button" data-view-target="library"><svg class="icon sm" aria-hidden="true"><use href="#icon-library"></use></svg>引用资料</button>
+                  </div>
+                </article>
+                <div class="metric-grid">
+                  <button class="metric-card" type="button" data-view-target="app-ppt"><span>从模板开始</span><strong>PPT</strong></button>
+                  <button class="metric-card" type="button" data-view-target="work-crm"><span>继续客户整理</span><strong>CRM</strong></button>
+                  <button class="metric-card" type="button" data-view-target="work-contract"><span>处理合同</span><strong>合同</strong></button>
+                  <button class="metric-card" type="button" data-view-target="work-project"><span>生成计划</span><strong>项目</strong></button>
+                </div>
+              </div>
+            </div>
+            <footer class="composer" aria-label="新对话输入区">
+              <div class="composer-box">
+                <div>
+                  <div class="composer-placeholder">输入一个新需求，例如：帮我准备下一家保险客户的方案材料...</div>
+                  <div class="composer-tools" aria-label="新对话工具">
+                    <button class="small-button" type="button" data-view-target="library"><svg class="icon sm" aria-hidden="true"><use href="#icon-link"></use></svg>引用资料</button>
+                    <button class="small-button" type="button" data-view-target="apps"><svg class="icon sm" aria-hidden="true"><use href="#icon-apps"></use></svg>使用应用</button>
+                  </div>
+                </div>
+                <button class="primary" type="button" data-toast="已创建新对话草稿"><svg class="icon sm" aria-hidden="true"><use href="#icon-send"></use></svg>开始</button>
+              </div>
+            </footer>
+          </section>
+
+          <section class="screen" data-screen="search" hidden aria-label="搜索">
+            <div class="scroll-area">
+              <div class="panel-card">
+                <div class="library-folder-head">
+                  <div>
+                    <h2>搜索</h2>
+                    <p>按工作、资料、客户对象、合同条款和应用入口统一搜索。</p>
+                  </div>
+                  <span class="status-pill">当前项目：保险经纪客户 A</span>
+                </div>
+                <div class="library-search">
+                  <svg class="icon sm" aria-hidden="true"><use href="#icon-search"></use></svg>
+                  <span>搜索项目、客户、资料、合同或应用...</span>
+                </div>
+              </div>
+              <div class="table-card">
+                <table>
+                  <thead><tr><th>结果</th><th>类型</th><th>位置</th><th>动作</th></tr></thead>
+                  <tbody>
+                    <tr><td>一期数字化方案交付</td><td>工作</td><td>主对话</td><td><button class="small-button" type="button" data-view-target="conversation">打开</button></td></tr>
+                    <tr><td>客户访谈记录</td><td>资料</td><td>资料库</td><td><button class="small-button" type="button" data-view-target="library">打开</button></td></tr>
+                    <tr><td>保险经纪客户 A</td><td>客户对象</td><td>CRM</td><td><button class="small-button" type="button" data-view-target="work-crm">打开</button></td></tr>
+                    <tr><td>充值消费合同</td><td>合同</td><td>合同工作区</td><td><button class="small-button" type="button" data-view-target="work-contract">打开</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </section>
 
           <section class="screen" data-screen="apps" hidden aria-label="应用导航页">
@@ -2631,8 +3140,11 @@
                         <button class="hero-action secondary" type="button" data-view-target="work-ppt">进入工作区</button>
                       </div>
                     </div>
-                    <div class="feature-art ppt-hero" aria-hidden="true">
-                      <svg class="hero-glyph" viewBox="0 0 24 24"><use href="#icon-presentation"></use></svg>
+                    <div class="feature-art logo-hero ppt-hero" aria-hidden="true">
+                      <span class="ppt-mark">
+                        <span class="ppt-screen"><i></i><i></i><i></i></span>
+                        <span class="ppt-stand"></span>
+                      </span>
                     </div>
                   </article>
 
@@ -2646,8 +3158,14 @@
                         <button class="hero-action secondary" type="button" data-view-target="work-crm">进入工作区</button>
                       </div>
                     </div>
-                    <div class="feature-art crm-hero" aria-hidden="true">
-                      <svg class="hero-glyph" viewBox="0 0 24 24"><use href="#icon-users"></use></svg>
+                    <div class="feature-art logo-hero crm-hero" aria-hidden="true">
+                      <span class="crm-mark">
+                        <span class="crm-card"><i></i><i></i></span>
+                        <span class="crm-link crm-link-a"></span>
+                        <span class="crm-link crm-link-b"></span>
+                        <span class="crm-node crm-node-main"></span>
+                        <span class="crm-node crm-node-alt"></span>
+                      </span>
                     </div>
                   </article>
                 </section>
@@ -2659,7 +3177,12 @@
                   </div>
                   <div class="store-app-grid">
                     <article class="store-item">
-                      <div class="store-item-icon ppt"><svg class="icon" aria-hidden="true"><use href="#icon-presentation"></use></svg></div>
+                      <div class="store-item-icon logo-tile ppt" aria-hidden="true">
+                        <span class="ppt-mark ppt-mark-sm">
+                          <span class="ppt-screen"><i></i><i></i><i></i></span>
+                          <span class="ppt-stand"></span>
+                        </span>
+                      </div>
                       <button class="store-item-copy" type="button" data-view-target="app-ppt">
                         <span class="store-item-title">PPT 应用</span>
                         <span class="store-item-desc">方案、模板、版本、导出记录</span>
@@ -2670,7 +3193,15 @@
                       </div>
                     </article>
                     <article class="store-item">
-                      <div class="store-item-icon crm"><svg class="icon" aria-hidden="true"><use href="#icon-users"></use></svg></div>
+                      <div class="store-item-icon logo-tile crm" aria-hidden="true">
+                        <span class="crm-mark crm-mark-sm">
+                          <span class="crm-card"><i></i><i></i></span>
+                          <span class="crm-link crm-link-a"></span>
+                          <span class="crm-link crm-link-b"></span>
+                          <span class="crm-node crm-node-main"></span>
+                          <span class="crm-node crm-node-alt"></span>
+                        </span>
+                      </div>
                       <button class="store-item-copy" type="button" data-view-target="app-crm">
                         <span class="store-item-title">CRM 应用</span>
                         <span class="store-item-desc">客户对象、联系人、机会阶段</span>
@@ -2743,7 +3274,7 @@
                 <table>
                   <thead><tr><th>事项</th><th>来源</th><th>状态</th><th>动作</th></tr></thead>
                   <tbody>
-                    <tr><td>确认合同充值消费条款</td><td>合同工作区</td><td>待处理</td><td><button class="small-button" data-view-target="work-contract" type="button">继续处理</button></td></tr>
+                    <tr><td>确认合同充值消费条款</td><td>合同工作区</td><td>待办</td><td><button class="small-button" data-view-target="work-contract" type="button">继续处理</button></td></tr>
                     <tr><td>确认第 3 页数据图表口径</td><td>PPT 工作区</td><td>处理中</td><td><button class="small-button" data-view-target="work-ppt" type="button">继续处理</button></td></tr>
                     <tr><td>审批首期服务费边界</td><td>审批应用</td><td>待审批</td><td><button class="small-button" data-view-target="work-approval" type="button">处理</button></td></tr>
                     <tr><td>补充客户联系人角色</td><td>CRM 应用</td><td>待补充</td><td><button class="small-button" data-view-target="work-crm" type="button">打开</button></td></tr>
@@ -2912,6 +3443,55 @@
             </div>
           </section>
 
+          <section class="screen" data-screen="automations" hidden aria-label="自动化">
+            <div class="scroll-area">
+              <div class="metric-grid">
+                <div class="metric-card"><span>运行中</span><strong>4</strong></div>
+                <div class="metric-card"><span>本周触发</span><strong>18</strong></div>
+                <div class="metric-card"><span>需确认</span><strong>2</strong></div>
+                <div class="metric-card"><span>已暂停</span><strong>1</strong></div>
+              </div>
+              <div style="height:12px"></div>
+              <div class="table-card">
+                <table>
+                  <thead><tr><th>自动化</th><th>触发条件</th><th>状态</th><th>动作</th></tr></thead>
+                  <tbody>
+                    <tr><td>客户资料更新提醒</td><td>CRM 关键字段变化</td><td>运行中</td><td><button class="small-button" type="button" data-view-target="work-crm">查看</button></td></tr>
+                    <tr><td>PPT 引用资料版本提醒</td><td>资料库出现新版</td><td>运行中</td><td><button class="small-button" type="button" data-view-target="work-ppt">查看</button></td></tr>
+                    <tr><td>合同审批转交</td><td>条款进入法务确认</td><td>需确认</td><td><button class="small-button" type="button" data-view-target="work-approval">处理</button></td></tr>
+                    <tr><td>实施计划周报</td><td>每周五 17:00</td><td>运行中</td><td><button class="small-button" type="button" data-view-target="work-project">查看</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="screen" data-screen="settings" hidden aria-label="设置">
+            <div class="scroll-area">
+              <div class="panel-card">
+                <div class="library-folder-head">
+                  <div>
+                    <h2>设置</h2>
+                    <p>管理账号、设备、通知、应用权限和本机就绪状态。</p>
+                  </div>
+                  <span class="status-pill">WorkforceOS 桌面端</span>
+                </div>
+              </div>
+              <div style="height:12px"></div>
+              <div class="table-card">
+                <table>
+                  <thead><tr><th>设置项</th><th>当前状态</th><th>说明</th><th>动作</th></tr></thead>
+                  <tbody>
+                    <tr><td>账号与组织</td><td>保险演示租户</td><td>当前成员可见客户 A 项目</td><td><button class="small-button" type="button" data-toast="账号设置已打开">打开</button></td></tr>
+                    <tr><td>应用权限</td><td>6 个应用可用</td><td>PPT、CRM、合同、数据、审批、项目管理</td><td><button class="small-button" type="button" data-view-target="apps">查看</button></td></tr>
+                    <tr><td>通知</td><td>待办与资料更新</td><td>重要提醒进入待办中心</td><td><button class="small-button" type="button" data-view-target="tohandle">查看</button></td></tr>
+                    <tr><td>资料库同步</td><td>已就绪</td><td>本机导入和企业资料库可引用</td><td><button class="small-button" type="button" data-view-target="library">查看</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
           <section class="screen" data-screen="app-ppt" hidden aria-label="PPT 应用首页"></section>
           <section class="screen" data-screen="app-crm" hidden aria-label="CRM 应用首页"></section>
           <section class="screen" data-screen="app-contract" hidden aria-label="合同应用首页"></section>
@@ -2946,7 +3526,7 @@
               <div class="progress-list">
                 <div class="progress-line"><span class="dot green"></span><span>CRM 客户背景已整理</span><strong>完成</strong></div>
                 <div class="progress-line"><span class="dot blue"></span><span>PPT 初稿正在编辑</span><strong>进行中</strong></div>
-                <div class="progress-line"><span class="dot orange"></span><span>合同条款等待确认</span><strong>待处理</strong></div>
+                <div class="progress-line"><span class="dot orange"></span><span>合同条款等待确认</span><strong>待办</strong></div>
               </div>
             </article>
 
@@ -3082,10 +3662,14 @@
 
       const titles = {
         conversation: ["工作台 - Workbench", "一期数字化方案交付"],
+        "new-chat": ["新对话 - New Chat", "开始新的工作讨论"],
+        search: ["搜索 - Search", "全局搜索"],
         apps: ["应用 - Apps", "应用导航页"],
         tohandle: ["待办中心 - To-do Center", "待我处理"],
         library: ["资料库 - Library", "客户交付资料"],
         record: ["工作记录 - Work Record", "交付过程留痕"],
+        automations: ["自动化 - Automations", "自动化规则"],
+        settings: ["设置 - Settings", "账号与本机设置"],
         "app-ppt": ["PPT 应用", "PPT 应用首页"],
         "app-crm": ["CRM 应用", "CRM 应用首页"],
         "app-contract": ["合同应用", "合同应用首页"],
